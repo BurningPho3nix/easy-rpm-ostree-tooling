@@ -102,4 +102,5 @@ sudo cp ./90-override.conf /etc/sysctl.d/
 sudo mv ./Setup-Tool-Fedora/ /home/burningpho3nix/Documents/
 sudo mv ./rpmbuild/ /home/burningpho3nix/
 
+sudo dnf update --refresh -y && flatpak update -y && snap refresh
 sudo reboot
