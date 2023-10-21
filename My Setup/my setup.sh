@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo dnf config-manager --setopt=\"defaultyes=True\" --setopt=\"max_parallel_downloads=10\" --save
+sudo dnf config-manager --setopt="defaultyes=True" --setopt="max_parallel_downloads=10" --save
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm
 sudo dnf install -y https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-39.noarch.rpm
 sudo dnf install -y rpmfusion-free-release-tainted
@@ -10,7 +10,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo dnf install -y snapd
 sudo ln -s /var/lib/snapd/snap /snap
 sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
-sudo dnf groupupdate -y multimedia --setop=\"install_weak_deps=False\" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo dnf groupupdate -y sound-and-video
 sudo dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
 sudo dnf swap -y mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
@@ -43,14 +43,15 @@ sudo dnf install -y xwaylandvideobridge
 sudo dnf install -y neofetch
 sudo dnf install -y htop
 sudo dnf install -y gh
+sudo dnf remove -y libreoffice*
 
-flatpak install com.discordapp.Discord -y
-flatpak install com.usebottles.bottles -y
-flatpak install net.davidotek.pupgui2 -y
-flatpak install net.lutris.Lutris -y
-flatpak install com.obsproject.Studio -y
-flatpak install org.gimp.GIMP -y
-flatpak install flathub org.libreoffice-LibreOffice -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.usebottles.bottles -y
+flatpak install flathub net.davidotek.pupgui2 -y
+flatpak install flathub net.lutris.Lutris -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub org.gimp.GIMP -y
+flatpak install flathub org.libreoffice.LibreOffice -y
 flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub io.github.prateekmedia.appimagepool -y
 flatpak install flathub org.audacityteam.Audacity -y
