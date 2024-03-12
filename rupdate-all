@@ -1,0 +1,5 @@
+#! /usr/bin/sh
+
+rpm-ostree upgrade
+flatpak update
+systemctl reboot
